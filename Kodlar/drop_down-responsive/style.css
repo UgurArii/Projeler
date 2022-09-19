@@ -1,0 +1,136 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    background: lightblue url('doga.jpg') no-repeat fixed center;
+    background-size: cover;
+    
+}
+
+nav{
+    width: 100%;
+    height: 75px;
+    background: #009999;
+    display: flex;
+    justify-content: space-between;
+    align-items:center;
+}
+
+
+nav ul{
+    background: #009999;
+    
+}
+
+.logo{
+    text-decoration: none;
+    font-family: sans-serif;
+    color: #fff;
+    font-weight: bolder;
+    text-transform: uppercase;
+    margin-left: 20px;
+}
+
+nav ul li{
+    padding: 20px;
+    font-family: sans-serif;
+    display: inline-block;
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: #eaefef;
+    font-weight: bolder;
+    text-transform: uppercase;
+}
+
+nav ul li ul{
+    position: absolute;
+    opacity: 0;
+    visibility: hidden;
+    text-align: center;
+    width: 100%;
+    border-top: 3px solid #fff;
+    transition: 0.8s ease-in-out;
+    
+}
+
+nav > ul > li > ul{
+    left:0;
+    top:90%;
+}
+
+nav > ul > li > ul > li ul{
+    border-top: 3px solid #fff;
+    border-left: 3px solid #fff;
+    left: 100%;
+    top: 30%;
+}
+
+nav ul li:hover > ul{
+    opacity: 0.9;
+    visibility: visible;
+}
+input{
+    display: none;
+}
+
+
+label{
+    width: 150px;
+    height: 43px;
+    display: flex;
+    justify-content: center;
+    align-items:center;
+    font-weight: bolder;
+    font-size: 30px;
+    border: 1px solid #fff;
+    color: #fff;
+    display: none;
+}
+
+
+label span{
+    font-family: sans-serif;
+}
+
+@media(max-width:768px){
+    body{
+        
+        background-size: cover;
+    }
+    nav > ul{
+       position: absolute;
+       top: 72px;
+       left: -100%;
+       width: 100%;
+       transition: 0.8s linear;
+    }
+    
+    nav ul li{
+        display: block;
+    }
+    
+    label{
+        display: flex;
+        margin-right: 12px;
+    }
+    
+    nav ul li ul{
+        width: max-content;
+        z-index: 1;
+    }
+    input:checked ~ #menu{
+        left: 0;
+    }
+}
+
+
+
+
+

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Sayfa Seç</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<script>
+    document.addEventListener("DOMContentLoaded", function(event){
+        var e = document.getElementById("menu");
+        e.addEventListener("change", function (){
+            selectedURL = this.options[this.options.selectedIndex].value;
+            
+            if(this.value != "null"){
+                var onaylanan = confirm("Bu sayfaya gitmek istediğinizden emin misiniz");
+                //cevap tamam ise
+                if(onaylanan==true){
+                    document.location.href = selectedURL;
+                }else{
+                    return false;
+                }
+            }
+        });
+    }); 
+</script>
+
+    <form name="navForm" action="">
+        <select name="menu" id="menu">
+            <option value="http://localhost:8383/ders2/sayfaSec.html">Sayfa Seç</option>
+             <option value="https://tr-tr.facebook.com/">Facebook</option>
+              <option value="https://www.youtube.com/">Youtube</option>
+               <option value="https://twitter.com/">Twitter</option>
+                <option value="https://www.linkedin.com/">LinkedIn</option>
+        </select>
+    </form>
+</body>
+</html>
+
+

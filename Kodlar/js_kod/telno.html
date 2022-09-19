@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Start-Stop To</title>
+    <script type = "text/javascript">
+        var phone_book = new Array();
+        phone_book["blank"] = "";
+        phone_book["adem"] = "(540-5555-1111)";
+        phone_book["ahmet"] = "(540-5555-1112)";
+        phone_book["burak"] = "(540-5555-1113)";
+        phone_book["cagatay"] = "(540-5555-1114)";
+        phone_book["ekrem"] = "(540-5555-1115)";
+        phone_book["furkan"] = "(540-5555-1116)";
+        
+        function displayNumber(the_phone_book, entry)
+        {
+         var the_number = the_phone_book[entry];
+         window.document.the_form.number_box.value = the_number;
+        }
+     </script>
+</head>
+<body>
+   <h1>Telefon Rehberi</h1>
+   <form name="the_form">
+      <b>Ad:</b>
+      <select onchange="displayNumber(phone_book, this.options[this.selectedIndex].value);">
+         <option value="blank">Ad Seçiniz</option>
+         <option value="adem">Adem</option>
+         <option value="ahmet">Ahmet</option>
+         <option value="burak">Burak</option>
+         <option value="cagatay">Çağatay</option>
+         <option value="ekrem">Ekrem</option>
+         <option value="furkan">Furkan</option>
+      </select>
+      <b>Numara</b>
+      <input type="text" name="number_box" value=""/>
+   </form>
+</body>
+</html>

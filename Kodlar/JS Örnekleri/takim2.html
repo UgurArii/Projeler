@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        function yazdir()
+        {
+            var m, t, i=1;
+            
+            m = document.mesaj.metin.value;
+            t = parseInt(document.mesaj.tekrar.value);
+            
+            while(i<=t)
+            {
+                document.write("<br>"+m);
+                i++;
+            }
+        
+        }
+    </script>
+</head>
+<body>
+    <form name="mesaj" id="mesaj">
+        <table>
+            <tr>
+                <td>Yazdırılacak Mesaj</td>
+                <td><input type="text" name="metin"/></td>
+            </tr>
+                <tr>
+                    <td>Tekrar sayısı</td>
+                    <td><input type="text" name="tekrar"/></td>
+                </tr>
+                <tr>
+                    <td align="center" colspan="5">
+                        <input type="button" onclick="yazdir()" value="Yazdır"/>
+                    </td>
+                </tr>
+        </table>
+    </form>
+</body>
+</html>

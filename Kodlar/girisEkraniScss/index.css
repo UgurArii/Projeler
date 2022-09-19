@@ -1,0 +1,159 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;1,200&display=swap");
+* {
+  font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: linear-gradient(to right, #560bad, #8e60c4);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.container {
+  height: 75vh;
+  width: 80vw;
+  background-color: #300169;
+}
+.container .section-one {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  height: 80%;
+  border-bottom: 0.05rem #a31a6a solid;
+}
+.container .section-one .social-links {
+  display: flex;
+  margin-bottom: 2rem;
+  position: relative;
+  height: 20%;
+  cursor: pointer;
+}
+.container .section-one .social-links .facebook {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  left: -10.5rem;
+}
+.container .section-one .social-links .facebook span {
+  width: 52%;
+  color: white;
+  font-size: 0.8rem;
+  padding-right: 0.4rem;
+}
+.container .section-one .social-links .facebook .icon {
+  height: 6rem;
+  width: 6.5rem;
+  border-radius: 100%;
+  border: #a31a6a 0.1rem solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+.container .section-one .social-links .facebook .icon img {
+  height: 4rem;
+}
+.container .section-one .social-links .twitter {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  right: -12rem;
+}
+.container .section-one .social-links .twitter span {
+  width: 50%;
+  color: white;
+  padding-left: 0.4rem;
+  font-size: 0.8rem;
+}
+.container .section-one .social-links .twitter .icon {
+  height: 6rem;
+  width: 6.5rem;
+  border-radius: 100%;
+  border: #a31a6a 0.1rem solid;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: -0.5rem 0px #300169;
+  background-color: #300169;
+}
+.container .section-one .social-links .twitter .icon img {
+  height: 4rem;
+}
+.container .section-one .main-form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.container .section-one .main-form button {
+  padding: 0.8rem 1.5rem;
+  width: 22rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  font-size: medium;
+  background-color: rgb(96, 196, 96);
+  color: white;
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.container .section-one .main-form button:hover {
+  background: #338b33 radial-gradient(circle, transparent 1%, #338b33, 1%) center/15000%;
+}
+.container .section-one .main-form a {
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a31a6a;
+  font-weight: bold;
+  margin-bottom: 2rem;
+  transition: 0.3s ease-in-out;
+}
+.container .section-one .main-form a:hover {
+  color: white;
+}
+.container .section-two {
+  height: 20%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container .section-two button {
+  padding: 0.8rem 1.5rem;
+  width: 22rem;
+  border-radius: 0.3rem;
+  outline: none;
+  border: none;
+  font-size: medium;
+  background-color: #ffd60a;
+  color: rgb(36, 34, 34);
+  cursor: pointer;
+  transition: background 0.5s;
+}
+.container .section-two button:hover {
+  background: #a38800 radial-gradient(circle, transparent 1%, #a38800, 1%) center/15000%;
+}
+
+input {
+  padding: 0.8rem 1rem;
+  width: 22rem;
+  border-radius: 0.25rem;
+  border: #a31a6a 0.02rem solid;
+  color: white;
+  background-color: #2b045c;
+  margin-bottom: 0.8rem;
+  font-size: large;
+}
+input:placeholder {
+  color: rgba(255, 255, 255, 0.548);
+}/*# sourceMappingURL=index.css.map */

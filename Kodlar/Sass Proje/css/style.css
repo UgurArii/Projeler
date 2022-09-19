@@ -1,0 +1,178 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background: #f8f9fb;
+}
+
+html, body, ul, li {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+#main-nav {
+  background: #032f3e;
+}
+#main-nav ul {
+  width: 100%;
+}
+#main-nav li {
+  float: left;
+  width: 16.6666666667%;
+}
+@media screen and (max-width: 600px) {
+  #main-nav li {
+    width: 100%;
+  }
+}
+#main-nav a {
+  color: #fff;
+  text-decoration: none;
+  padding: 16px;
+  display: block;
+  text-align: center;
+}
+#main-nav a:hover {
+  background: #04455b;
+}
+#main-nav:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+section h1 {
+  margin: 40px 0;
+  text-align: center;
+  text-transform: uppercase;
+  color: #032f3e;
+  font-size: 24px;
+}
+
+#services {
+  margin-bottom: 60px;
+}
+#services li {
+  float: left;
+  width: 33.33%;
+  box-sizing: border-box;
+  text-align: center;
+}
+#services img {
+  width: 60%;
+  margin: 20px 20%;
+}
+#services a {
+  text-decoration: none;
+  color: #032f3e;
+  font-weight: bold;
+}
+#services a:hover {
+  color: #3e1203;
+}
+#services:after {
+  content: "";
+  display: block;
+  clear: both;
+}
+
+.lead-banner {
+  width: 100%;
+  position: relative;
+  color: white;
+  text-align: right;
+}
+.lead-banner .banner-content {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+.lead-banner img {
+  width: 100%;
+}
+.lead-banner span {
+  font-size: 42px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media screen and (max-width: 3000px) and (min-width: 1200px) {
+  .lead-banner span {
+    font-size: 60px;
+  }
+}
+.lead-banner span .sub-title {
+  font-weight: bnormal;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1200px) {
+  .lead-banner {
+    max-height: 640px;
+    overflow: hidden;
+  }
+}
+
+.lesson-banner {
+  width: 100%;
+  position: relative;
+  color: white;
+  text-align: left;
+}
+.lesson-banner .banner-content {
+  position: absolute;
+  top: 50px;
+  width: 100%;
+}
+.lesson-banner img {
+  width: 100%;
+}
+.lesson-banner span {
+  font-size: 42px;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+@media screen and (max-width: 3000px) and (min-width: 1200px) {
+  .lesson-banner span {
+    font-size: 60px;
+  }
+}
+.lesson-banner span .sub-title {
+  font-weight: bnormal;
+  margin-bottom: 30px;
+}
+@media screen and (max-width: 1200px) {
+  .lesson-banner {
+    max-height: 640px;
+    overflow: hidden;
+  }
+}
+.lesson-banner li {
+  text-transform: uppercase;
+  font-size: 20px;
+  max-width: 500px;
+  margin: 60px 0;
+}
+
+#projects li {
+  float: left;
+  width: 30%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+#projects li:nth-child(3n) {
+  margin-right: 0;
+}
+#projects li img {
+  width: 100%;
+}/*# sourceMappingURL=style.css.map */

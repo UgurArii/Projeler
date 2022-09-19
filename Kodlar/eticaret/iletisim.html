@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"/>
+    <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous"/>
+       <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+        <div class="container">
+         <a class="navbar-brand" href="index.html">Bootstrap</a>
+         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Deneme">
+             <span class="navbar-toggler-icon"></span>
+         </button>
+         <div class="collapse navbar-collapse justify-content-end" id="navbarsExampleDefault">
+             <ul class="navbar-nav m-auto">
+                 <li class="navbar-item m-auto">
+                     <a class="nav-link" href="index.html">Anasayfa</a>
+                 </li>
+                 <li class="navbar-item">
+                     <a class="nav-link" href="#">Kategori</a>
+                 </li>
+                 <li class="navbar-item">
+                     <a class="nav-link" href="#">Ürünler</a>
+                 </li>
+                 <li class="navbar-item">
+                     <a class="nav-link" href="sepet.html">Sepet<span class="src-only"></span>(güncel)</span></span></a>
+                 </li>
+                 <li class="navbar-item">
+                     <a class="nav-link" href="iletisim.html">İletişim</a>
+                 </li>
+             </ul>
+             <form class="form-inline">
+                 <div class="input-group">
+                     <input type="text" class="form-control" placeholder="Arama" />
+                     <div class="input-group-append">
+                         <button type="button" class="btn btn-secondary btn-number">
+                             <i class="fa fa-search"></i>
+                         </button>
+                     </div>
+                 </div>
+                 <a class="btn btn-success btn-sm ml-3" href="sepet.html">
+                     <i class="fa fa-shopping-cart">Sepet</i>
+                     <span class="badge badge-light">3</span>
+                 </a>
+             </form>
+         </div>
+        </div> 
+
+ </nav>
+ <section class="jumbotron text-center">
+    <div class="container">
+        <h1 class="jumbotron-heading">E-Ticaret</h1>
+    </div>
+</section>
+<div class="container"><!--container-->
+    <div class="row"><!--row-->
+        <div class="col"><!--col-->
+            <nav aria-label="breadcrumb">
+                <ol class="breadcrumb">
+                    <li class="breadcrumb-item"><a href="sepet.html">Sepet</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">İletişim</li>
+                </ol>
+            </nav>
+        </div><!--col-->
+    </div><!--row-->
+
+</div><!--container-->
+<div class="container"><!--container-->
+  <div class="row"><!--row-->
+    <div class="col"><!--col-->
+        <div class="card">
+            <div class="card-header bg-primary text-white"><i class="fa fa-envelope">İletişime Geçin</i></div>
+            <div class="card-body">
+                <form>
+                    <div class="form-group">
+                        <label form="name">Ad</label>
+                        <input type="text" class="form-control" id="name" placeholder="Adınız" required/>
+                    </div>
+                    <div class="form-group">
+                        <label form="email">Mail Adresi</label>
+                        <input type="email" class="form-control" id="email" placeholder="Adınız" required/>
+                    </div>
+                    <div class="form-group">
+                        <label form="message">Mesajınız</label>
+                    <textarea class="form-control" id="message" rows="10" required></textarea>
+                    </div>
+                    <div class="mx-auto">
+                    <button type="submit" class="btn btn-primary">Gönder</button>
+                </div>
+                </form>
+            </div>
+        </div>
+    </div><!--col-->
+  </div><!--row-->
+</div><!--container-->
+    <footer class="text-light bg-dark">
+        <div class="container"><!--container-->
+         <div class="row"><!--row-->
+             <div class="col-md-3 col-lg-4 col-xl-3">
+                 <h5>Hakkımızda</h5>
+                 <hr>
+                 <p class="mb-0">
+                     Hakkımızda Alanı
+                 </p>
+             </div>
+             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto">
+                 <h5>Bilgiler</h5>
+                 <hr>
+                 <ul>
+                     <li><a href="">Facebook</a></li>
+                     <li><a href="">Telegram</a></li>
+                     <li><a href="">Twitter</a></li>
+                     <li><a href="">LinkedIn</a></li>
+                 </ul>
+             </div>
+             <div class="col-md-3 col-lg-2 col-xl-2 mx-auto">
+                 <h5>Sosyal Medya</h5>
+                 <hr>
+                 <ul>
+                     <li><a href="">Facebook</a></li>
+                     <li><a href="">Telegram</a></li>
+                     <li><a href="">Twitter</a></li>
+                     <li><a href="">LinkedIn</a></li>
+                 </ul>
+             </div>
+             <div clas="col-md-4 col-lg-3 col-xl-3">
+                 <h5>İletişim</h5>
+                 <hr>
+                 <ul>
+                     <li><a href="">Şirketimiz</a></li>
+                     <li><a href="">a@gmail.com</a></li>
+                     <li><a href="">+4505505444</a></li>
+                     <li><a href="">+8908405404</a></li>
+                 </ul>
+             </div>
+         </div><!--row-->
+        </div><!--container-->
+ 
+     </footer>
+ </body>
+ </html>

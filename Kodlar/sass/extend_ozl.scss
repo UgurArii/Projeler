@@ -1,0 +1,29 @@
+.baslik{
+    border: 1px solid #212121;
+    font-size:10px;
+    padding: 10px;
+    margin: 10px;
+    color: black;
+}
+
+.anabaslik{
+    @extend .baslik;
+    background-color: red;
+}
+
+.paragraf{
+    @extend .baslik;
+    background-color: yellow;
+}
+
+.metinyazi{
+    @extend .baslik;
+    background-color: aqua;
+}
+
+
+.mahset{
+    @extend .baslik;
+    background-color: cadetblue;
+    float: left;
+}

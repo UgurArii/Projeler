@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <meta charset="UTF-8" />
+  <title>HTML5 Canvas Örnekleri</title>
+</head>
+
+<body>
+  <canvas id="cizimAlani" width="270" height="160" style="border:5px solid #c3c3c3;">
+  </canvas>
+  <script>
+    var cizimAlani = document.getElementById("cizimAlani");
+
+    /* Kırmızı dikdörtgen */
+    var ctx = cizimAlani.getContext("2d");
+    ctx.fillStyle = "yellow";
+    ctx.fillRect(20, 20, 100, 50);
+
+    /* Gradient dikdörtgen 1 */
+    var grd = ctx.createLinearGradient(140, 20, 240, 70);
+    grd.addColorStop(0, "black");
+    grd.addColorStop(1, "white");
+    ctx.fillStyle = grd;
+    ctx.fillRect(140, 20, 100, 50);
+
+    /* Gradient dikdörtgen 2 */
+    var grd2 = ctx.createLinearGradient(20, 90, 120, 90);
+    grd2.addColorStop(0, "black");
+    grd2.addColorStop("0.3", "magenta");
+    grd2.addColorStop("0.5", "blue");
+    grd2.addColorStop("0.6", "green");
+    grd2.addColorStop("0.8", "yellow");
+    grd2.addColorStop(1, "red");
+    ctx.fillStyle = grd2;
+    ctx.fillRect(20, 90, 100, 50);
+
+    /* Renkli metin */
+    ctx.font = "30px Verdana";
+    var grd3 = ctx.createLinearGradient(140, 20, 240, 90);
+    grd3.addColorStop(0, "black");
+    grd3.addColorStop("0.3", "magenta");
+    grd3.addColorStop("0.6", "blue");
+    grd3.addColorStop("0.8", "green");
+    grd3.addColorStop(1, "red");
+    ctx.strokeStyle = grd3;
+    ctx.strokeText("Canvas!", 135, 125);
+
+    /* www.yusufsezer.com.tr */
+    ctx.font = "15px arial";
+    ctx.fillStyle = "black";
+    ctx.fillText("Canvas Eğitimi", cizimAlani.height / 2, cizimAlani.width / 2 + 20);
+  </script>
+</body>
+
+</html>

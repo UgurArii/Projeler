@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zimanzan</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.0/css/font-awesome.min.css">
+
+    <style>
+        html, body{
+            height: 98%;
+            margin: 0;
+        }
+        #üstAlan{
+            background-image: url("banner.jpg");
+            background-repeat: round;
+            background-size: cover;
+            height: 30%;
+            width: 80%;
+            margin: auto;
+        }
+        #kat_1{
+            height: 100%;
+            width: 100%;
+            margin: auto;
+        } 
+        #Menü{
+            width: 100%;
+        }
+        #İçerikAlanı{
+            width: 80%;
+        }
+        #içerikAlanı img{
+            width: 50%;
+        }
+        #içerikAlanı p{
+            width: 60%;
+        }
+        #altAlan{
+            height: 10%;
+            background-color: darkgray;
+            width: 80%;
+            margin: auto;
+            text-align: center;
+
+        } 
+        #altAlan p{
+            line-height: 55px;
+        }
+        .sidebar {
+            height: 80px;
+            width: 100%;
+            position: fixed;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            background-color: #111;
+            overflow-x: hidden;
+            padding-top: 16px;
+}
+
+        .sidebar a {
+            padding: 6px 8px 6px 16px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #818181;
+           float: left;
+}
+
+        .sidebar a:hover {
+            color: #f1f1f1;
+}
+
+        .main {
+            margin-left: 160px; /* Same as the width of the sidenav */
+            padding: 0px 10px;
+}
+
+        @media screen and (max-height: 450px) {
+            .sidebar {padding-top: 15px;}
+            .sidebar a {font-size: 18px;}
+}
+    </style>
+    </head>
+<body>
+    <div id="üstAlan"></div>
+    <div id="kat_1">
+        <div id="Menü">
+            <div class="sidebar">
+                <a href="#Home"><i class="fa fa-fw fa-home"></i> Anasayfa</a>
+                <a href="#blog"><i class="fa fa-fw fa-eye"></i> Blog</a>
+                <a href="#Calendar"><i class="fa fa-fw fa-calendar"></i> Haftalık Planlayıcı</a>
+                <a href="#contact"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+              </div>
+        </div> 
+        <div id="İçerikAlanı">
+            <img src="içerikresmi.jpg">s
+            <p>
+        Bu sayfa dilcilere ve dil öğrenmek isteyen herkese hitap edecektir.
+        Dil öğrenme metodları, kelime ezberleme, kalıplar, deyimler ve atasözleri, zamanlar gibi 
+        birçok şey verildiği gibi film, dizi ve kitaplara da değineceğiz. Zimanzan dilci demektir.
+            </p>
+
+        </div>
+    </div>
+    <div id="altAlan"> <p>Tüm Hakları Saklıdır</p> </div>
+</body>
+</html>
+
+

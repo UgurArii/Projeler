@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        .panel{
+            width: 240px;
+            margin: 50px auto;
+        }
+        
+        .kutu{
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            margin: 5px;
+            text-align: center;
+            border: 1px solid red;
+            float: left;
+                
+        }
+    </style>
+</head>
+<body>
+<div class="panel">
+    <div class="kutu">A</div>
+    <div class="kutu">B</div>
+    <div class="kutu">C</div>
+    <div class="kutu">Ç</div>
+    <div class="kutu">D</div>
+    <div class="kutu">E</div>
+    <div class="kutu">F</div>
+    <div class="kutu">G</div>
+    <div class="kutu">Ğ</div>
+     <div class="kutu">H</div>
+    <div class="kutu">I</div>
+    <div class="kutu">İ</div>
+    <div class="kutu">J</div>
+    <div class="kutu">K</div>
+    <div class="kutu">L</div>
+    <div class="kutu">M</div>
+    
+</div>
+<script>
+    var kutular = document.querySelectorAll(".kutu");
+    
+    for(var i=0;i<kutular.length;i++){
+        kutular[i].onmouseover = function(){
+            
+            if(this.style.backgroundColor=="red")
+            {
+                this.style.backgroundColor="yellow";
+            }else{
+                this.style.backgroundColor="red";
+            }
+        }
+    }
+</script>
+</body>
+</html>

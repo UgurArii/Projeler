@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>  
+    *{
+      box-sizing: border-box;
+     }
+     .panel{
+         width: 200px;
+         margin: 50px auto;
+     }
+     .kutu{
+         width: 50px;
+         height: 50px;
+         line-height: 50px;
+         margin: 5px;
+         text-align: center;
+         border: 1px solid red;
+         float: left;
+     }
+      </style>
+      
+</head>
+<body>
+<div class="panel">
+    <div class="kutu">1</div>
+    <div class="kutu">2</div>
+    <div class="kutu">3</div>
+    <div class="kutu">4</div>
+    <div class="kutu">5</div>
+    <div class="kutu">6</div>
+    <div class="kutu">7</div>
+    <div class="kutu">8</div>
+    <div class="kutu">9</div>
+    <div class="kutu">10</div>
+    <div class="kutu">11</div>
+    <div class="kutu">12</div>
+</div>
+
+ <script>
+ 
+        //tüm .kutu elementlerini bir düğüm listesi olarak seçin
+        var kutular = document.querySelectorAll(".kutu");
+ 
+        //for ile tüm kutular üzerinde hareket edin
+        //ilk index(0) ve son index kutular.length-1 dir
+        //örnek bir kutu seçme kutular[2] 
+        for(var i=0;i<kutular.length;i++)
+        {
+ 
+            //her bir kutu ögesine bir tane anonim fonksiyon atayın, fare üzerine gelince çalışsın
+            kutular[i].onmouseover=function(){
+ 
+                //fare kutunun üzerine gelince kutunu rengine göre kırmızı beyaz yapsın
+                
+                //kırmızı ise beyaz, kırmızı değilse kırmızı yapsın
+                if(this.style.backgroundColor=="red")
+                {
+                    this.style.backgroundColor="yellow";
+                }
+                else
+                {
+                    this.style.backgroundColor="red";
+                }
+            }
+ 
+        }
+ 
+</script>
+</body>
+</html>
+
+
+
+

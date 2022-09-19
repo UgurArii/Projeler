@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="tr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Blog Sayfası - Bootstrap Tema</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Bootstrap icons-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css" rel="stylesheet" type="text/css" />
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Lato:300,400,700,300italic,400italic,700italic" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Nav Alanı-->
+        <nav class="navbar navbar-light bg-light static-top">
+            <div class="container ">
+                <a class="navbar-brand" href="">Bootstrap</a>
+                <a class="btn btn-primary" href="">Giriş Yapın</a>
+            </div>
+        </nav>
+        
+        <!--Masthead-->
+        <header class="masthead">
+            <div class="container position-relative">
+                <div class="row justify-content-center">
+                    <div class="col-xl-6" >
+                        <div class="text-center text-white">
+                        <!--Başlık-->
+                        <h1 class="mb-5">Profesyonel Bir Web Sitesi </h1>
+                <form class="form-subscribe" id="contactForm" data-sb-form-api-token="API_TOKEN">
+                    <div class="row">
+                        <div class="col">
+                    <input class="form-control form-control-lg"" id="emailAddress" type="email" placeholder="Mail Adresiniz" data-sb-validators="required, email"/>
+                    <div class="invalid-feedback text-white" data-sd-feedback="emailAddress:required">E-mail Adresinizi Girmelisiniz</div>
+                    <div class="invalid-feedback text-white" data-sd-feedback="emailAddress:email">Geçersiz Email Adresi</div>
+                </div>
+                <div class="col-auto"><button class="btn btn-primary btn-lg disabled" id="submitButton" type="submit">Gönder</button></div>
+                </div>
+                  <!--İşlem Başarılıysa-->
+                  <div class="d-none" id="submitSuccessMessage">
+                    <div class="text-center mb-3">
+                        <div class="fw-bolder">Form Başarıyla Gönderildi</div>
+                        <p>Bu formu aktif etmek için giriş yapınız</p>
+                        
+                        <a class="text-white" href="">Bootstrap</a>
+                        <!--GÖnderden sonra hata mesajı-->
+                        <div class="d-none" id="submitErrorMessage"><div class="text-center text-danger mb-3">Hatalı Mesajı</div>
+                    </div>
+                </div>
+                </form>
+              
+                    </div>
+                    </div>
+                </div>
+            </div>
+        </header>
+        <!--Icon Grid Alanı-->
+        <section class="features-icons bg-light text-center">
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-window m-auto text-primary"></i></div>
+                                <h3>Responsive</h3>
+                                <p class="lead mb-0">Cihaz görünümlerine göre kodlama</p>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-layers m-auto text-primary"></i></div>
+                                <h3>Bootstrap 5</h3>
+                                <p class="lead mb-0">Bootstrap framework</p>
+                            
+                        </div>
+                        
+                    </div>
+                    <div class="col-lg-4">
+                        <div class="features-icons-item mx-auto mb-5 mb-lg-0 mb-lg-3">
+                            <div class="features-icons-icon d-flex"><i class="bi-terminal m-auto text-primary"></i></div>
+                                <h3>Kolay Kullanım</h3>
+                                <p class="lead mb-0">Terminal İçeriği</p>
+                            
+                        </div>
+                        
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!--Resim Alanı-->
+        <section class="showcase">
+            <div class="container-fluid p-0">
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image:url('assets/img/bg-showcase-1.jpg')"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Responsive</h2>
+                        <p class="lead mb-0">Son yıllarda adını sıklıkla duyduğumuz responsive tasarım Türkçe'ye duyarlı, uyumlu tasarım şeklinde çevrilebilir. 2010 yılında ortaya çıkmasına rağmen birkaç yıl içinde hem dünyada hem de ülkemizde oldukça popüler olan responsive tasarım, bir web sitesinin masaüstü bilgisayar, akıllı telefon, tablet gibi büyük veya küçük ekranlı cihazlardan giriş yapıldığında; site içerisindeki resim, yazı gibi içeriklerin giriş yapılan cihazın ekran genişliği baz alınarak yeniden şekillenip cihaz ekranına tam uyumlu halde kullanıcıyla buluşmasını sağlayan tasarımdır. Responsive tasarımı, kullanıcının gördüğü cihazın türüne bağlı olarak, kendisini yanıtlayan veya yeniden boyutlandıran bir web sayfası olarak düşünebiliriz.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 text-white showcase-img" style="background-image:url('assets/img/bg-showcase-2.jpg')"></div>
+                    <div class="col-lg-6  my-auto showcase-text">
+                        <h2>Bootstrap 5</h2>
+                        <p class="lead mb-0">Son yıllarda adını sıklıkla duyduğumuz responsive tasarım Türkçe'ye duyarlı, uyumlu tasarım şeklinde çevrilebilir. 2010 yılında ortaya çıkmasına rağmen birkaç yıl içinde hem dünyada hem de ülkemizde oldukça popüler olan responsive tasarım, bir web sitesinin masaüstü bilgisayar, akıllı telefon, tablet gibi büyük veya küçük ekranlı cihazlardan giriş yapıldığında; site içerisindeki resim, yazı gibi içeriklerin giriş yapılan cihazın ekran genişliği baz alınarak yeniden şekillenip cihaz ekranına tam uyumlu halde kullanıcıyla buluşmasını sağlayan tasarımdır. Responsive tasarımı, kullanıcının gördüğü cihazın türüne bağlı olarak, kendisini yanıtlayan veya yeniden boyutlandıran bir web sayfası olarak düşünebiliriz.</p>
+                    </div>
+                </div>
+                <div class="row g-0">
+                    <div class="col-lg-6 order-lg-2 text-white showcase-img" style="background-image:url('assets/img/bg-showcase-3.jpg')"></div>
+                    <div class="col-lg-6 order-lg-1 my-auto showcase-text">
+                        <h2>Kolay Kullanım</h2>
+                        <p class="lead mb-0">Son yıllarda adını sıklıkla duyduğumuz responsive tasarım Türkçe'ye duyarlı, uyumlu tasarım şeklinde çevrilebilir. 2010 yılında ortaya çıkmasına rağmen birkaç yıl içinde hem dünyada hem de ülkemizde oldukça popüler olan responsive tasarım, bir web sitesinin masaüstü bilgisayar, akıllı telefon, tablet gibi büyük veya küçük ekranlı cihazlardan giriş yapıldığında; site içerisindeki resim, yazı gibi içeriklerin giriş yapılan cihazın ekran genişliği baz alınarak yeniden şekillenip cihaz ekranına tam uyumlu halde kullanıcıyla buluşmasını sağlayan tasarımdır. Responsive tasarımı, kullanıcının gördüğü cihazın türüne bağlı olarak, kendisini yanıtlayan veya yeniden boyutlandıran bir web sayfası olarak düşünebiliriz.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+     
+        <script src="https://cdn.startbootstrap.com/sb-forms-latest.js"></script>
+    </body>
+</html>

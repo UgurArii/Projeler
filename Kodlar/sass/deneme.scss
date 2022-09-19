@@ -1,0 +1,21 @@
+$font : "Helvetica, sans-herif";
+$renk: #212121;
+$genislik : 100%;
+p{
+    font-family: $font;
+    color: $renk;
+}
+
+
+div{
+    .paragraf{
+       color:$renk;
+        &:hover{
+            color:red;
+        }
+    }
+    .resim{
+        width:$genislik;
+    }
+}
+

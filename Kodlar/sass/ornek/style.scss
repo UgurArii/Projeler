@@ -1,0 +1,15 @@
+$renk: red;
+$yaziRenk: #212121;
+$paragRenk: blue;
+
+body{
+    background-color: $renk;
+}
+
+h1{
+    color: $yaziRenk;
+}
+
+p{
+    color: $paragRenk;
+}

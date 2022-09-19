@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet" type="text/css"/>
+    <style>
+        .zemin{
+            background-color: #ff6666;
+            max-width: 220px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        
+        .tabBlok{
+            background-color: #5757f4;
+            border: 0px solid #ffa54f;
+            border-radius: 5px;
+            -moz-border-radius: 5px;
+            -webkit-border-radius: 5px;
+            max-width: 200px;      
+            width: 100%;
+            overflow: hidden;
+            display: block;  
+        }
+        
+        .dijitalSaat{
+            vertical-align:middle;
+            font-family: Orbitron;
+            font-size: 40px;
+            font-weight: normal;
+            color: #fff;
+            padding: 0 10px;
+        }
+        .saat{
+            vertical-align: middle;
+            font-family: Orbitron;
+            font-size: 20px;
+            font-weight: normal;
+            color: #fff;
+        }
+        
+        
+    </style>
+</head>
+<body onload="dijitalSaat();">
+<div class="zemin">
+    <table class="tabBlok" align="center" cellspacing="0" cellpadding="0" border="0">
+        <tr>
+            <td class="dijitalSaat" id="dt"></td>
+            <td>
+                <table cellspacing="0" cellpadding="0" border="0">
+                    <tr><td class="saat" id="dt_saat"></td></tr>
+                    <tr><td class="saat" id="dt_saniye"></td></tr>
+                </table>
+            </td>
+        </tr>
+    </table>
+    
+    
+</div>
+
+<script>
+    function dijitalSaat(){
+        var dt = new Date();
+        var saat = dt.getHours();
+        var dakika = dt.getMinutes();
+        var saniye = dt.getSeconds();
+        
+        
+        dakika = Tik(dakika);
+        saniye = Tik(saniye);
+        
+        document.getElementById('dt').innerHTML = saat + ":" + dakika;
+        document.getElementById('dt_saniye').innerHTML = saniye;
+        if(saat>12){
+            document.getElementById('dt_saat').innerHTML = '';
+            
+        }else{
+            document.getElementById('dt_hour').innerHTML = '';
+        }
+        
+        var time;
+        time = setInterval('dijitalSaat()',1000);
+    }
+     
+    function Tik(tikDegeri){
+        if(tikDegeri<10){
+            tikDegeri = "0"+tikDegeri;
+        }
+        return tikDegeri;
+    }
+</script>
+</body>
+</html>

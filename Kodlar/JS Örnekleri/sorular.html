@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Sorular</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+        function cevapla()
+        {
+            var soruSayisi = 3;
+            var gelenCevap = new Array();
+            var dogruCevap = new Array("C","C","C");
+            var dogru = 0;
+            var yanlis = 0;
+            var cevap = 0;
+            var rapor = "";
+            
+            for(i=1;i<=soruSayisi;i++)
+            {
+                var secenekler = document.getElementsByName("s"+i);
+                for(j=0; j<secenekler.length;j++)
+                {
+                    if(secenekler[j].checked)
+                    {
+                        if(secenekler[j].value==dogruCevap[i-1])
+                        {
+                            cevap = 1;
+                        }else{
+                            cevap = 0;
+                        }
+                        
+                        if(cevap)
+                        {
+                            rapor += i + ". Soru için cevabınız: " +secenekler[j].value+ ", Doğrudur<br>";
+                        }else{
+                            rapor += i + ". Soru için cevabınız: " +secenekler[j].value+ 
+                                    ", Yanlıştır Doğru Cevap="+dogruCevap;
+                        }
+                        gelenCevap.push(secenekler[j].value);
+                    }
+                }
+            }
+            
+            for(k=0;k<soruSayisi;k++)
+            {
+                if(gelenCevap[k]==dogruCevap[k]){
+                    dogru++;
+                }else{
+                    yanlis++;
+                }
+            }
+            
+            rapor += "Sonuç: " + dogru + "Doğru," + yanlis+ "Yanlış" + "<br>";
+            document.getElementById('rapor').innerHTML=rapor;
+        }
+    </script>
+    
+</head>
+<body>
+    <form name="formTest">
+        <fieldset class="radiogroup">
+            <legend>1) Aşağıdakilerden hangisi uygun değişken ismidir?</legend>
+            <ul class="radio" style="list-style: none">
+            <li>A) <input type="radio" name="s1" value="A"/><label>case</label></li>
+            <li>B) <input type="radio" name="s1" value="B"/><label>try</label></li>
+            <li>C) <input type="radio" name="s1" value="C"/><label>tree</label></li>
+            <li>D) <input type="radio" name="s1" value="D"/><label>const</label></li>
+            </ul>
+        </fieldset> 
+        
+        <fieldset class="radiogroup">
+            <legend>2) Tabloda satır oluşturmak için hangi komut kullanılır</legend>
+            <ul class="radio" style="list-style: none">
+            <li>A) <input type="radio" name="s2" value="A"/><label>th</label></li>
+            <li>B) <input type="radio" name="s2" value="B"/><label>td</label></li>
+            <li>C) <input type="radio" name="s2" value="C"/><label>tr</label></li>
+            </ul>
+        </fieldset> 
+        
+               <fieldset class="radiogroup">
+            <legend>3) Still dosya uzantısı ne olmalı</legend>
+            <ul class="radio" style="list-style: none">
+            <li>A) <input type="radio" name="s3" value="A"/><label>still</label></li>
+            <li>B) <input type="radio" name="s3" value="B"/><label>style</label></li>
+            <li>C) <input type="radio" name="s3" value="C"/><label>css</label></li>
+            <li>D) <input type="radio" name="s3" value="D"/><label>html</label></li>
+            </ul>
+        </fieldset> 
+        
+        <input type="button" value="Cevapla" onclick="cevapla()"/>
+    </form>
+<div id="rapor"></div>
+</body>
+</html>

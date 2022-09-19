@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+      
+        body{
+            background: #131313;
+            color: #525252;
+            font-family: verdana, Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+            font-size: 12px;
+        }
+               
+               
+        .sayfa{
+            width: 960px;
+            margin: auto;
+        }
+        
+        .ust{
+            background: #232323;
+        }
+        
+        #logo{
+            background: red;
+         float: left;  
+         width: 280px;
+         margin-top: 7px;
+         margin-left: 10px;
+        }
+        
+        
+        #logo h1 a{
+            font-family: Georgia;
+            text-decoration: none;
+            color: #DBDBDB;
+            letter-spacing: 3px;
+        }
+        
+        #logo p{
+            font-family: Georgia;
+            text-decoration: none;
+            margin-left: 3px;
+            margin: 0;
+            padding: 0;
+            color: #DBDBDB;
+            letter-spacing: 2px;
+        }
+        
+        #menu{
+           
+            float: right;
+            width: 650px;
+            margin: 30px 0 0 0;
+            padding: 0;
+            font-size: 13px;
+            text-align: right;
+        }
+        
+        #menu ul{
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        
+        #menu ul li{
+            display: inline;
+            margin-right: 35px;
+        }
+        
+        
+        #menu ul li a{
+            text-decoration: none;
+            font-size: 13px;
+            font-family: Verdana;
+            color: #DBDBDB;
+        }
+        
+        #menu ul li a:hover{
+            color: orange;
+        }
+        
+        .orta{
+            margin-top: 20px;
+        }
+        
+        .orta-sol{
+            width: 575px;
+            float: left;
+        }
+        
+        .orta-sag{
+            width: 360px;
+            float: right;
+            height: 280px;
+            background: #FDC609;
+            padding: 10px;
+        }
+        
+        .orta-sag img{
+            box-shadow: 5px 5px 5px 5px gray;
+        }
+        
+        .orta-resim{
+            margin: 0 25px;
+        }
+        
+        .card{
+            width: 300px;
+            float: left;
+        }
+        
+        .card:nth-child(3){
+            margin: 0;
+        }
+        
+        .card{
+            margin-right: 30px;
+        }
+        .card h1{
+            border-bottom: 5px dotted white;
+        }
+        
+        .button a{
+            display: inline-block;
+            padding: 10px 15px;
+            color: #FDC609;
+            background-color: #232323;
+            text-decoration: none;
+        }
+        
+        button{
+            
+            margin-top: 50px;
+            display: inline-block;
+            padding: 10px 15px;
+            color: #FDC609;
+            background-color: #232323;
+            text-decoration: none; 
+            border-radius: 35px 0 35px 0;
+            border: none;
+            box-shadow: 5px 5px 5px 5px gray;
+            transform: rotate(30deg);
+        }
+        
+       
+        .clear{
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+<div class="sayfa">
+    <div class="ust">
+        <div id="logo">
+            <h1><a href="">HTML-CSS</a></h1>
+            <p>HTML-CSS Web Sitesi</p>
+        </div>
+        <div id="menu">
+            <ul>
+                <li><a href="">Anasayfa</a></li>
+                 <li><a href="urunler.html">Ürünler</a></li>
+                  <li><a href="">Referanslar</a></li>
+                   <li><a href="">Hakkımızda</a></li>
+                    <li><a href="">İletişim</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+     <button>
+                Daha Fazla...
+            </button>
+    <div class="orta">
+        <div class="orta-sol">
+            <img src="html.png" alt="" width="250" height="250"/>
+        </div>
+        <div class="orta-sag">
+            <h1>HTML-CSS Kodlanması</h1>
+            <p>HTML-CSS Dersi</p>
+            <img class="orta-resim" src="html.png" alt="" width="70" height="70"/>
+        </div>
+         <div class="clear"></div>
+    </div>
+    <div class="icerik">
+        <div class="card">
+            <h1>Ürün Açıklaması</h1>
+            <img src="html.png" alt="" width="150" height="150"/>
+            <p>
+                HTML, bir programlama dili olarak tanımlanamaz. Zira HTML kodlarıyla kendi başına çalışan bir program yazılamaz. Ancak bu dili yorumlayabilen programlar aracılığıyla çalışabilen programlar yazılabilir. Programlama dili denilememesinin nedeni tam olarak budur. Temel gereği yazı, görüntü, video gibi değişik verileri ve bunları içeren sayfaları birbirine basitçe bağlamak, buna ek olarak söz konusu sayfaların web tarayıcısı yazılımları tarafından düzgün olarak görüntülenmesi için gerekli kuralları belirlemektir. HTML kodunu web tarayıcıları okur, yorumlar ve görsel hale dönüştürürler, dolayısıyla aynı HTML kodunun farklı tarayıcılarda farklı sonuç vermesi olasıdır. CSS ve JavaScript ile beraber kullanıldığında HTML vasıtasıyla görsel ve dinamik web siteleri yaratılabilir.
+            </p>
+            <div class="button">
+                <a href="">Daha Fazla...</a>
+            </div>
+        </div>
+         <div class="card orta-card">
+            <h1>Ürün Açıklaması</h1>
+            <img src="html.png" alt="" width="150" height="150"/>
+            <p>
+                HTML, bir programlama dili olarak tanımlanamaz. Zira HTML kodlarıyla kendi başına çalışan bir program yazılamaz. Ancak bu dili yorumlayabilen programlar aracılığıyla çalışabilen programlar yazılabilir. Programlama dili denilememesinin nedeni tam olarak budur. Temel gereği yazı, görüntü, video gibi değişik verileri ve bunları içeren sayfaları birbirine basitçe bağlamak, buna ek olarak söz konusu sayfaların web tarayıcısı yazılımları tarafından düzgün olarak görüntülenmesi için gerekli kuralları belirlemektir. HTML kodunu web tarayıcıları okur, yorumlar ve görsel hale dönüştürürler, dolayısıyla aynı HTML kodunun farklı tarayıcılarda farklı sonuç vermesi olasıdır. CSS ve JavaScript ile beraber kullanıldığında HTML vasıtasıyla görsel ve dinamik web siteleri yaratılabilir.
+            </p>
+            <div class="button">
+                <a href="">Daha Fazla...</a>
+            </div>
+        </div>
+         <div class="card">
+            <h1>Ürün Açıklaması</h1>
+            <img src="html.png" alt="" width="150" height="150"/>
+            <p>
+                HTML, bir programlama dili olarak tanımlanamaz. Zira HTML kodlarıyla kendi başına çalışan bir program yazılamaz. Ancak bu dili yorumlayabilen programlar aracılığıyla çalışabilen programlar yazılabilir. Programlama dili denilememesinin nedeni tam olarak budur. Temel gereği yazı, görüntü, video gibi değişik verileri ve bunları içeren sayfaları birbirine basitçe bağlamak, buna ek olarak söz konusu sayfaların web tarayıcısı yazılımları tarafından düzgün olarak görüntülenmesi için gerekli kuralları belirlemektir. HTML kodunu web tarayıcıları okur, yorumlar ve görsel hale dönüştürürler, dolayısıyla aynı HTML kodunun farklı tarayıcılarda farklı sonuç vermesi olasıdır. CSS ve JavaScript ile beraber kullanıldığında HTML vasıtasıyla görsel ve dinamik web siteleri yaratılabilir.
+            </p>
+            <div class="button">
+                <a href="">Daha Fazla...</a>
+            </div>
+            <br>
+            <br>
+            <br>
+            <button>
+                Daha Fazla...
+            </button>
+            
+        </div>
+    </div>
+</div>
+</body>
+</html>

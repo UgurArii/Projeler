@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>Galeri</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet" type="text/css"/>
+     <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet"/>
+
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <p>Galeri</p>
+            </div><!-- logo div bitimi-->
+            <div class="menu">
+                <a href="index.html">Anasayfa</a>
+                <a href="hakkimizda.html">Hakkımızda</a>
+                <a href="#">Galeri</a>
+                <a href="#">İletişim</a>
+            </div>
+            <div class="icon">
+                <i class="fa fa-search"></i>
+                <a href="#">Giriş</a>
+            </div>
+        </nav>
+        <section class="h-text">
+            <i class="fa fa-camera" id="camera"></i>
+            <h1 data-aos="zoom-in-down" data-aos-delay="100">Anı Yakalamak Resim Çekiniz</h1>
+            <input type="text" name="" placeholder="Arama Yapınız"/>
+            <button><i class="fa fa-search"></i></button>
+        </section>
+    </header><!-- Header bitimi-->
+<section class="filter-gallery">
+    <div class="portfolio-menu">
+        <ul>
+            <li class="active" data-filter="*">Tümü</li>
+            <li data-filter=".doga">Doğa</li>
+            <li data-filter=".dugun">Düğün</li>
+            <li data-filter=".resim">Resim</li>
+        </ul>
+    </div><!-- portfolio-menu div i bitimi-->
+    <div class="portfolio-item">
+        <div class="item doga" data-aos="flip-left" data-aos-offset="100" data-aos-delay="100">
+            <img src="img/p1.jpg" width="100" height="100"/>
+        </div>
+         <div class="item dugun" data-aos="flip-left" data-aos-offset="100" data-aos-delay="200">
+            <img src="img/p2.jpg" width="100" height="100"/>
+        </div>
+        <div class="item resim" data-aos="flip-left" data-aos-offset="100" data-aos-delay="300">
+            <img src="img/p3.jpg" width="100" height="100"/>
+        </div>
+           <div class="item doga" data-aos="flip-left" data-aos-offset="100" data-aos-delay="100">
+            <img src="img/p4.jpg" width="100" height="100"/>
+        </div>
+         <div class="item dugun" data-aos="flip-left" data-aos-offset="100" data-aos-delay="200">
+            <img src="img/p5.jpg" width="100" height="100"/>
+        </div>
+        <div class="item resim" data-aos="flip-left" data-aos-offset="100" data-aos-delay="300">
+            <img src="img/p6.jpg" width="100" height="100"/>
+        </div>
+    </div>
+</section>
+
+<section class="members">
+    <div class="member-info" data-aos="zoom-in-up" data-aos-oofset="100" data-aos-delay="100">
+        <h1>Ekibimiz Hakkında</h1>
+        <p>Biz Kimiz?</p>
+    </div>
+    <div class="member-card" data-aos="zoom-in-down" data-aos-oofset="100" data-aos-delay="300" >
+        <img src="img/member.png" alt=""/>
+        <p>HTML, bir programlama dili olarak tanımlanamaz. Zira HTML kodlarıyla kendi başına çalışan bir program yazılamaz. Ancak bu dili yorumlayabilen programlar aracılığıyla çalışabilen programlar yazılabilir. Programlama dili denilememesinin nedeni tam olarak budur</p>
+        <h2>HTML-CSS</h2>
+        <img src="img/icon1.png" width="100"/>
+        <img src="img/icon2.png" width="100"/>
+        <img src="img/icon3.png" width="100"/>
+        <img src="img/icon4.png" width="100"/>
+        
+    </div>
+    <div class="m-images" data-aos="zoom-in" data-aos-offset="100" data-aos-delay="300">
+        <img src="img/s1.jpg" alt=""/>
+        <img src="img/s2.jpg" alt=""/>
+        <img src="img/s3.jpg" alt=""/>
+        <img src="img/s4.jpg" alt=""/>
+        <img src="img/s5.jpg" alt=""/>
+        <img src="img/s6.jpg" alt=""/>
+    </div>
+    
+</section>
+<footer>
+    <div class="haberAlani">
+        <div data-aos="fade-up" data-aos-offset="200">
+            <h2>Haberler</h2>
+            <p>Çalışma alanlarımızla ilgili haberler</p>
+        </div>
+        <div class="n-text" data-aos="fade-up-right" data-aos-offset="200">
+            <label>
+                <input type="text" name="" placeholder="Mail Adresi"/>
+                <button>Bülten</button>
+            </label>
+        </div>
+        <div class="f-contact" data-aos="zoom-in-up" data-aos-offset="200">
+            <div>
+                <h1>Hakkımızda</h1>
+                <p>Çalışma alanlarımızla ilgili haberler</p>
+                <i class="fa fa-whatsapp"></i>
+                <i class="fa fa-instagram"></i>
+                <i class="fa fa-telegram"></i>
+                <i class="fa fa-twitter"></i>
+            </div>
+        </div>
+    </div>
+</footer>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/isotope-layout@3/dist/isotope.pkgd.min.js"></script>
+<script>
+	$('.portfolio-item').isotope({
+  // options
+  itemSelector: '.item',
+  layoutMode: 'fitRows'
+});
+		$('.portfolio-menu ul li').click(function(){
+		$('.portfolio-menu ul li').removeClass('active');
+		$(this).addClass('active');
+
+			var selector = $(this).attr('data-filter');
+		$('.portfolio-item').isotope({
+			filter:selector
+		});
+		return false;
+	});
+</script>
+
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<script>
+  AOS.init();
+
+</script>
+</body>
+</html>

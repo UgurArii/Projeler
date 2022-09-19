@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <title>TODO supply a title</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script>
+    function Point3d(a, c, b) {
+  this.x = (a === undefined) ? 0 : a;
+  this.y = (c === undefined) ? 0 : c;
+  this.z = (b === undefined) ? 0 : b;
+  this.fl = 400;
+  this.vpX = 0;
+  this.vpY = 0;
+  this.cX = 0;
+  this.cY = 0;
+  this.cZ = 0
+}
+Point3d.prototype = {
+  setVanishingPoint: function (b, a) {
+    this.vpX = b;
+    this.vpY = a
+  },
+  setCenter: function (c, b, a) {
+    this.cX = c;
+    this.cY = b;
+    this.cZ = a
+  },
+  rotateX: function (a) {
+    var d = Math.cos(a),
+      b = Math.sin(a),
+      c = this.y * d - this.z * b,
+      e = this.z * d + this.y * b;
+    this.y = c;
+    this.z = e;
+    return this
+  },
+  rotateY: function (a) {
+    var d = Math.cos(a),
+      c = Math.sin(a),
+      b = this.x * d - this.z * c,
+      e = this.z * d + this.x * c;
+    this.x = b;
+    this.z = e;
+    return this
+  },
+  rotateZ: function (a) {
+    var d = Math.cos(a),
+      b = Math.sin(a),
+      c = this.x * d - this.y * b,
+      e = this.y * d + this.x * b;
+    this.x = c;
+    this.y = e;
+    return this
+  },
+  getScreenX: function () {
+    var a = this.fl / (this.fl + this.z + this.cZ);
+    return this.vpX + (this.cX + this.x) * a
+  },
+  getScreenY: function () {
+    var a = this.fl / (this.fl + this.z + this.cZ);
+    return this.vpY + (this.cY + this.y) * a
+  }
+};
+var points = new Array();
+points.push(new Point3d(0, 0, -100));
+var change = Math.sqrt(5) / 2;
+for (var i = 0; i < 5; i++) {
+  points.push(new Point3d(Math.sin(change) * Math.cos(2 * i * Math.PI / 5) * -100, Math.sin(change) * Math.sin(2 * i * Math.PI / 5) * -100, Math.cos(change) * -100))
+}
+for (var i = 0; i < 5; i++) {
+  points.push(new Point3d(Math.sin(change) * Math.cos(2 * i * Math.PI / 5) * 100, Math.sin(change) * Math.sin(2 * i * Math.PI / 5) * 100, Math.cos(change) * 100))
+}
+points.push(new Point3d(0, 0, 100));
+
+function display(b) {
+  context.save();
+  context.beginPath();
+  context.moveTo(b[0].getScreenX(), b[0].getScreenY());
+  for (var a = 0; a < b.length; a++) {
+    context.lineTo(b[a].getScreenX(), b[a].getScreenY())
+  }
+  context.closePath();
+  context.clip();
+  context.strokeStyle = "RGBA(0,0,0,.5)";
+  context.fillStyle = b.color;
+  context.fill();
+  context.stroke();
+  context.restore()
+}
+var faces = new Array(6);
+faces[0] = [points[0], points[1], points[2]];
+faces[1] = [points[0], points[2], points[3]];
+faces[2] = [points[0], points[3], points[4]];
+faces[3] = [points[0], points[4], points[5]];
+faces[4] = [points[0], points[5], points[1]];
+faces[5] = [points[8], points[5], points[1]];
+faces[6] = [points[8], points[9], points[1]];
+faces[7] = [points[1], points[9], points[2]];
+faces[8] = [points[10], points[9], points[2]];
+faces[9] = [points[10], points[3], points[2]];
+faces[10] = [points[6], points[4], points[3]];
+faces[11] = [points[6], points[10], points[3]];
+faces[12] = [points[7], points[6], points[4]];
+faces[13] = [points[7], points[4], points[5]];
+faces[14] = [points[8], points[7], points[5]];
+faces[15] = [points[11], points[6], points[7]];
+faces[16] = [points[11], points[7], points[8]];
+faces[17] = [points[11], points[8], points[9]];
+faces[18] = [points[11], points[9], points[10]];
+faces[19] = [points[11], points[10], points[6]];
+faces.forEach(function (d, c, b) {
+  d.color = "RGBA(" + ((Math.random() * 255) | 0) + "," + ((Math.random() * 255) | 0) + "," + ((Math.random() * 255) | 0) + ",.8)"
+});
+var can = document.createElement("canvas");
+can.width = 500;
+can.height = 500;
+var context = can.getContext("2d");
+document.body.appendChild(can);
+var mousex = 250,
+  mousey = 250;
+context.lineWidth = 2;
+faces.forEach(display);
+context.stroke();
+
+function displayer() {
+  
+  context.clearRect(0, 0, can.width, can.height);
+  points.forEach(function (a) {
+    a.rotateX((mousey - a.vpY) * 0.0001).rotateY((mousex - a.vpX) * 0.0001);
+    a.setVanishingPoint(250, 250);
+    a.setCenter(a.x, a.y, 500)
+  });
+  faces = faces.sort(sortbyaz);
+  faces.forEach(display)
+  requestAnimationFrame(displayer);
+}
+requestAnimationFrame(displayer);
+document.body.onmousemove = function (a) {
+  mousex = a.pageX;
+  mousey = a.pageY
+};
+
+function sortbyaz(d, c) {
+  var h = 0,
+    g = 0;
+  for (var f = 0; f < d.length; f++) {
+    h += d[f].z
+  }
+  for (var e = 0; e < c.length; e++) {
+    g += c[e].z
+  }
+  h /= d.length + 1;
+  g /= c.length + 1;
+  return g - h
+};
+</script>
+</head>
+<body onload="">
+<div>TODO write content</div>
+</body>
+</html>

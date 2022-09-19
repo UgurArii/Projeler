@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<!-- Coding by CodingLab | www.codinglabweb.com-->
+<html lang="tr" dir="ltr">
+  <head>
+    <meta charset="UTF-8">
+    <title> Dijital Saat </title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+   </head>
+<body>
+<section>
+  <div class="container">
+    <div class="icons">
+      <i class="fas fa-moon"></i>
+      <i class="fas fa-sun"></i>
+    </div>
+    <div class="time">
+      <div class="time-colon">
+        <div class="time-text">
+          <span class="num hour_num">08</span>
+          <span class="text">Saat</span>
+        </div>
+        <span class="colon">:</span>
+      </div>
+
+      <div class="time-colon">
+        <div class="time-text">
+          <span class="num min_num">45</span>
+          <span class="text">Dakika</span>
+        </div>
+        <span class="colon">:</span>
+      </div>
+
+      <div class="time-colon">
+        <div class="time-text">
+          <span class="num sec_num">20</span>
+          <span class="text">Saniye</span>
+        </div>
+        <span class="as_ao">Ö.Ö.</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+
+  let section = document.querySelector("section"),
+  icons = document.querySelector(".icons");
+
+  icons.onclick = ()=>{
+  section.classList.toggle("dark");
+  }
+
+  setInterval(()=>{
+
+    let tarih = new Date();
+    saat = tarih.getHours();
+    dakika = tarih.getMinutes();
+    saniye = tarih.getSeconds();
+
+    let d;
+    
+    d = saat < 12 ? "Ö.Ö." : "Ö.S.";
+    saat = saat > 12 ? saat - 12 : saat;
+    saat = saat == 0 ? saat = 12 : saat;
+
+    saat = saat < 10 ? "0" + saat: saat;
+    dakika = dakika < 10 ? "0" + dakika : dakika;
+    saniye = saniye < 10 ? "0" + saniye : saniye;
+ 
+    document.querySelector(".hour_num").innerText = saat;
+    document.querySelector(".min_num").innerText = dakika;
+    document.querySelector(".sec_num").innerText = saniye;
+    document.querySelector(".as_ao").innerText = d;
+  },1000);
+
+</script>
+</body>
+</html>

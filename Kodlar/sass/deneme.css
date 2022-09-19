@@ -1,0 +1,14 @@
+p {
+  font-family: "Helvetica, sans-herif";
+  color: #212121;
+}
+
+div .paragraf {
+  color: #212121;
+}
+div .paragraf:hover {
+  color: red;
+}
+div .resim {
+  width: 100%;
+}/*# sourceMappingURL=deneme.css.map */
