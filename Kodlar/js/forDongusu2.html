@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Döngüsü</title>
+</head>
+<body>
+    <script>
+       var toplam = 0;
+       var carpim = 1;
+       var c_toplam=0;
+       var t_toplam = 0;
+       
+       for(var i = 1; i < 10; i++){
+         toplam = toplam + i;
+         //toplam += i
+         
+       }
+       alert("Toplam Sonucu="+toplam);
+      
+       for(var j = 1; j < 10; j++)
+       {
+          carpim *= j;
+          // carpim = carpim * j;
+       }
+       alert("Çarpım Sonucu:"+carpim);
+
+       for(var z=0;z<10;z++)
+       {
+            if(z%2==0){
+                c_toplam += z;
+            }else{
+                t_toplam = t_toplam+z;
+            }
+            
+       }
+       alert("Çift sayılarını toplamı 1-10 arası:"+c_toplam);
+       alert("Tek sayıların toplamı 1-10 arası:"+t_toplam);
+
+      var t_carpim = 1;
+      var c_carpim = 1;
+
+      for(var k=20; k >= 1; k--)
+      {
+        if(k%2==0)
+        {
+            c_carpim *= k;
+        }else{
+            t_carpim *= k;
+        }
+      }
+
+      alert("1-20 Arasındaki Çift Sayılar Çarpımı:"+c_carpim);
+      alert("1-20 arasındaki Tek Sayılar Çarpımı:"+t_carpim);
+    </script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
